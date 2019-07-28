@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/headerfooter.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <script>header1()</script>
+
+
+    <main class="dp-r">
+
+        <script>cont() </script>
+
+        <section class="container flex-p">
+
+            <div class=" font-size-0 h-600 green-bg p-t-0 flex-b-auto">
+
+                <img class="width-150" src="images/your-diet.png" alt="">
+                <img id="gender" class="width-150" src="images/male-active.png" alt="">
+            </div>
+
+            <div class=" font-size-0 h-600 form-bg flex-auto">
+                <div class="form max-width-740 ">
+
+                    <h1 class="heading ">
+                       <span class="grey"> PROVIDE YOUR </span>  <SPan class="f-w-900 black" >DETAILS</SPan>
+                    </h1>
+
+                    <form id="userDetail">
+
+                        <input class="color-1 width-330 h-50 mar-t-24 " type="text" name="" id="" placeholder="NAME ">
+
+                        <input class=" color-1 width-330 h-50 mar-t-24 mar-l-40 " type="text" name="" id=""
+                            placeholder="MOBILE">
+
+                        <input class="form-bg width-330 h-50 mar-t-24 " type="text" name="" id=""
+                            placeholder="AGE                                                  &#8964;">
+
+
+
+                        <div class="inline-block width-330 h-50  mar-t-24 mar-l-40 ">
+                            <h1 class="flex-a f-t-18 f20">GENDER:</h1>
+
+
+                            <input class="mr-r-10 v-align-10  " type="radio" value="Male" name="gender" id="">
+                            <LABel class="pad-r-10 v-align-10 grey f16" for="MALE">MALE</LABel>
+                            <input class="mr-r-10 v-align-10" type="radio" value="Female" name="gender" id="">
+                            <label class="pad-r-10 v-align-10 grey f16" for="">FEMALE</label>
+
+                        </div>
+
+                        <input class=" form-bg  width-330 h-50  mar-t-24 " type="text" name="" id=""
+                            placeholder="SELECT YOUR COUNTRY               &#8964;">
+
+
+                        <input class=" form-bg  width-330 h-50  mar-t-24 mar-l-40 " type="text" name="" id=""
+                            placeholder="SELECT STATE                                 &#8964;">
+
+                        <input class=" form-bg  width-330 h-50  mar-t-24  " type="text" name="" id=""
+                            placeholder="CITY                                                   &#8964;">
+
+                        <input class=" form-bg  width-330 h-50  mar-t-24 mar-l-40 " type="text" name="" id=""
+                            placeholder="HOUSEHOLD TYPE                         &#8964;">
+
+
+                        <input id="continueBtn" class="width-100p h-50 mar-t-50 blue-bg text_white " type="submit"
+                            value="CONTINUE">
+
+
+                    </form>
+
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+    <script>
+        $(document).ready(function (e) {
+            $('#myBtn').css("display", "none");
+            $('#welcomeUser').html("Hello Arun");
+            $('#navActive').css("background-color", "#6FBA1C");
+            $('.navActive').css("color", "white");
+
+
+            $("input[type='radio']").click(function () {
+                var radioValue = $("input[name='gender']:checked").val();
+                if (radioValue == "Male") {
+                    $('#gender').attr("src", "images/male.png");
+                    setCookie("gender", radioValue, 1);
+
+                }
+                else {
+                    $('#gender').attr("src", "images/female.png");
+                    setCookie("gender", radioValue, 1);
+
+
+
+                }
+            });
+
+            $('#continueBtn').click(function () {
+
+                $("input[type='text']").each(function (index, element) {
+                    var flag = false
+                    var number;
+                    var filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+
+                    number = $(element).val();
+                    if (index == 1) {
+
+
+                        if (filter.test(number)) {
+                            $("#userDetail").attr("action", "/Final_Task_Arun/screen2.html")
+                            return true;
+
+                        }
+                        else {
+
+
+                            alert("number should be 10 digits and integer only")
+
+
+                        }
+                    }
+
+
+                })
+
+
+
+            })
+
+
+        });
+
+    </script>
+
+
+</body>
+<script> footer1()</script>
+
+</html>

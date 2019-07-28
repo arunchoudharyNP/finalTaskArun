@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/headerfooter.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+</head>
+
+<body>
+
+    <div class="popup">
+        <div class="popup-content">
+            <span class="close">&Cross; &nbsp;</span>
+
+            <h1>CSE</h1>
+
+
+            <input type="text" name="" id="username" placeholder="Username">
+            <input type="password" name="" id="password" placeholder="Password">
+            <button type="submit" onclick="validate()" id="loginBtn" value="Login">LOGIN</button>
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <script> header1()</script>
+
+
+
+
+
+    <!-- .......Section1........ -->
+
+    <main>
+
+        <section class="container">
+            <div class="flex-p">
+                <div class="flex-b-50 pad-t-30">
+                    <img src="images/banner-img.png" alt="banner">
+                </div>
+
+                <div class="flex-b-50 pad-t-30">
+                    <h1 class="f45 inline-block v-align-80"> <span class="grey-light f-w-100"> An online survey on </span> <span
+                            class="green f-w-900">food habits </span>
+                        <span class="grey-light"> of Indians by</span> Center for Science and Environment </h1>
+                </div></span>
+
+            </div></span>
+
+            <div class="pad-b-40">
+                <h1 class="f24 grey-light">Food health and environment are strongly connected. What we eat and how we
+                    eat and the way it is produced affect our health and environment. But do we really know ? </h1>
+            </div>
+
+        </section>
+
+        <!-- ............Section2..........-->
+
+        <section class="green-bg">
+
+            <div class="container pad-t-30">
+                <h1 class="c-align text_white f34 f-w-900" CLAS>WHAT IS "GOOD" OR "BAD" FOOD ?</h1>
+                <h2 class="c-align text_white f20"> HOW DOES IT EFFECT OUR HEALTH ? <SPan class="f-w-900"> WHAT ARE ITS
+                        CONNECTIONS WITH THE ENVIRONMENT ?</SPan></h2>
+                <h2 class="c-align text_white f20">DO WE PLAY A ROLE IN CHOOSING OUR FOOD ?</h2>
+                <h1 class="c-align text_white f34 f-w-900">OR IS IT CHOOSEN FOR US ?</h1>
+            </div>
+
+            <div class="flex-sb-c container">
+                <div class="width-33p">
+                    <img src="images/food-1.png" alt="food-1">
+                </div>
+
+                <div class="width-33p ">
+                    <button id="startSurvey" class="pad-15 c-align mr-l-20p f20"> <a id="surveyBtn">START SURVEY</a>
+                    </button>
+                </div>
+
+                <div class="width-33p ">
+                    <img src="images/food-2.png" alt="food-2">
+                </div>
+
+            </div>
+        </section>
+
+
+        <script>
+
+
+            $('#myBtn').click(function () {
+
+                $('.popup').css("display", "block");
+
+
+            })
+
+            $('.close').click(function () {
+                $('.popup').css("display", "none");
+            })
+
+
+            $('.popup').click(function () {
+                $('.popup').css("display", "none");
+
+
+            })
+
+            $(".popup-content").click(function (e) {
+                e.stopPropagation();
+            })
+
+
+            function validate() {
+
+                var email = "arun.choudhary@npglobal.com";
+                var password = "Admin@123";
+
+                if ($('#username').val() == email && $('#password').val() == password) {
+                    $('.popup').css("display", "none");
+                    $('#myBtn').css("display", "none");
+                    $('#welcomeUser').html("Hello Arun");
+                    $('button').removeClass('startSurvey');
+                    $('button').addClass('surveyActive');
+                    
+                    $('.surveyActive').css("background-color","#4256b4");
+                    $('.survetActive').css("color","white");
+                    $('.surveyActive').mouseover(function(){
+
+                        $(this).css("background-color","white");
+                        $(this).css("color","#4256b4");
+                        $('#surveyBtn').css("color",'#4256b4');
+
+
+
+
+                    });
+
+                    $('.surveyActive').mouseleave(function(){
+
+                      $(this).css("background-color","#4256b4");
+                      $(this).css("color","white");
+                      $('#surveyBtn').css("color","white");
+
+                    });
+
+
+
+
+
+                    $('#surveyBtn').attr('href', '/Final_Task_Arun/screen1.html');
+                   
+
+                }
+                else {
+                    if ($('#username').val() == "" || $('#password').val() == "") {
+                        alert("Field can not be blank");
+                    }
+                    else {
+                        alert("Invalid Email or Invalid Password");
+                    }
+                }
+
+            }
+
+            // function session(){
+            //     $('navActive').css("background-color","green");
+
+
+            //     return  false;
+            // }
+
+
+
+
+        </script>
+
+    </main>
+
+
+
+</body>
+<script> footer1()</script>
+
+</html>

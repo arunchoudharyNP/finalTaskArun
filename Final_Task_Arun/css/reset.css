@@ -1,0 +1,14 @@
+/* CSS Resets */
+
+/* html { color: #000;  } */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td { margin: 0; padding: 0; } remove all margins and paddings. do not use * because it puts load on browser
+
+ol, ul { list-style: none; }
+caption, th { text-align: left; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; } /* reset all headings to normal */
+input, textarea, select { font-family: inherit; font-size: inherit; font-weight: inherit; } /* because form elements do not inherit from body, they take from operating system */
+img { border: 0; margin: 0; padding: 0} /* remove image border */
+
+/* body {font-size: 14px; line-height: 1.2;  font-family:Verdana, Geneva, sans-serif; } set for consistency across browsers */
+a { text-decoration:none; outline: none; color: black }
+img {max-width:100%; height:auto; }

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/headerfooter.js"> </script>
+    <script src="js/listHover.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+</head>
+
+
+
+<body>
+
+    <script>header1()</script>
+
+
+    <main class="dp-r">
+
+        <script>cont() </script>
+
+        <section class="container flex-p">
+
+            <div class=" font-size-0 h-600 green-bg p-t-0 flex-b-auto">
+
+                <img class="width-150" src="images/your-diet.png" alt="">
+                <img id="gender" class="width-150" src="images/male-active.png" alt="">
+            </div>
+
+            <div class=" font-size-0 h-600 form-bg flex-b-auto">
+                <div class="form max-width-740  ">
+
+                    <h1 class="heading2 "><span class="grey">How do you</span>  <span class="black f-w-900">consume</span> <span class="grey"> the following ?</span> </h1>
+
+                    <div class="food-sec flex-p">
+                            <div class="one food flex-sb-c"><h1 class="pad-10">INSTANT NOODLES</h1></div>
+                            <div class=" two food flex-sb-c"><h1 class="pad-15 mr-l-20p">FAST FOOD</h1></div>
+                            <div class="three food flex-sb-c"> <h1 class="pad-10 mr-l-20p">FRIED FOOD</h1></div>
+
+                        </div>
+                    <div class="flex-p ">
+
+
+                        <div class="flex-b-auto">
+                            <img class="mr-t-60" src="images/noodeles.png" alt="cereals">
+                            
+                        </div>
+
+
+                        <div class="date-list flex-b-auto max-width-500 pad-40 ">
+
+                            <ul class="f-sec mr15 cal-list">
+                                <li class="li-s-lg"><a class="a-color-imp" >1</a></li>
+                                <li class="li-s-lg"><a class="a-color-imp" >2</a></li>
+                                <li class="li-s-lg"><a class="a-color-imp" >3</a></li>
+                                <li class="li-s-lg"><a class="a-color-imp" >4</a></li>
+                                <labe class="pad-l-20 ">Snack</labe>
+                                <labe class="pad-l-25 ">Meal</labe>
+                                <labe class="pad-l-25 ">Both</labe>
+                                <labe class="pad-l-25 ">NA</labe>
+                               
+                            </ul>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+            
+
+        </section>
+
+    </main>
+
+
+    <script>listHover()</script>
+    <script>
+            $(document).ready(function(e){
+
+                $('#myBtn').css("display", "none");
+            $('#welcomeUser').html("Hello Arun");
+    
+             if(getCookie("gender")=="Male"){
+                $('#gender').attr("src", "images/male.png");
+    
+    
+             }
+             else{
+                $('#gender').attr("src", "images/female.png");
+    
+             }
+    
+            });
+
+
+
+           $('li').click(function(e){
+
+            var text=parseInt($(this).text());
+             if(text==2){
+                $('.two').css("background-color","#6FBA1C").css("color","white");
+                $('.one').removeClass("one");
+             }
+             if(text==3||text==4){
+                $('.three').css("background-color","#6FBA1C").css("color","white");
+                $('.two').css("background-color","#E1E1E1").css("color","black");
+             }
+
+             
+
+           })
+        
+        
+        
+        
+        </script>
+
+
+
+</body>
+<script> footer1()</script>
+
+</html>

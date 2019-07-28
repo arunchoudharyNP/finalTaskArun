@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/headerfooter.js"> </script>
+    <script src="js/listHover.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   
+</head>
+
+
+
+<body>
+
+    <script>header1()</script>
+
+
+    <main class="dp-r">
+
+        <script>cont() </script>
+
+        <section class="container flex-p">
+
+            <div class=" font-size-0 h-600 green-bg p-t-0 flex-b-auto">
+
+                <img class="width-150" src="images/your-diet.png" alt="">
+                <img id="gender" class="width-150" src="images/male-active.png" alt="">
+            </div>
+
+            <div class=" font-size-0 h-600 form-bg flex-b-auto">
+                <div class="form max-width-740  ">
+
+                    <h1 class="heading2 "><span class="grey">How many</span>  <span class="black f-w-900">times a day</span> <span class="grey">do you eat the following foods ?</span> </h1>
+                    <div class="flex-p ">
+
+
+                        <div class="flex-b-auto">
+                            <img class="mr-t-90" src="images/cereals.png" alt="cereals">
+                            <figcaption class="cereal c-align f20 f-w-900">CEREAL</figcaption>
+                        </div>
+
+                        <div class="date-list flex-b-auto max-width-500 pad-t-a-70-40 ">
+
+                            <ul class="cal-list">
+                                <li class="li-s-lg"><a class="a-color-imp" href="/Final_Task_Arun/screen4.html">1</a></li>
+                                <li class="li-s-lg"><a class="a-color-imp" href="/Final_Task_Arun/screen4.html">2</a></li>
+                                <li class="li-s-lg"><a class="a-color-imp" href="/Final_Task_Arun/screen4.html">3</a></li>
+                                <li class="li-s-lg"><a class="a-color-imp" href="/Final_Task_Arun/screen4.html">4</a></li>
+                                <li class="li-s-lg"><a class="a-color-imp" href="/Final_Task_Arun/screen4.html">5</a></li>
+                            </ul>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+            
+
+        </section>
+
+    </main>
+
+
+    <script>listHover()</script>
+    <script>
+            $(document).ready(function(e){
+                $('#myBtn').css("display", "none");
+            $('#welcomeUser').html("Hello Arun");
+    
+             if(getCookie("gender")=="Male"){
+                $('#gender').attr("src", "images/male.png");
+    
+    
+             }
+             else{
+                $('#gender').attr("src", "images/female.png");
+    
+             }
+    
+            });
+        
+        
+        
+        
+        </script>
+
+
+
+</body>
+<script> footer1()</script>
+
+</html>
